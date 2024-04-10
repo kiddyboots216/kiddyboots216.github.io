@@ -22,13 +22,12 @@
                 <p class="name" style="text-align: center;">
                   Ashwinee Panda
                 </p>
-                <p>I am a 4th year PhD student at <a href="https://princeton.edu/">Princeton University</a> working with <a href="https://www.princeton.edu/~pmittal/">Prateek Mittal</a> on trustworthy artificial intelligence and privacy preserving machine learning.
-                </p>
-                <p>Before Princeton I did my B.S. and M.S. at <a href="https://rise.cs.berkeley.edu/">the UC Berkeley RISE Lab</a> where I was co-advised
+                <p>I am a 4th (final) year PhD student at <a href="https://princeton.edu/">Princeton University</a> working with <a href="https://www.princeton.edu/~pmittal/">Prateek Mittal</a> on trustworthy artificial intelligence and privacy preserving machine learning.
+                I am fortunate to be funded by a number of fellowships and grants, most recently the <a href="https://openai.com/blog/superalignment-fast-grants">OpenAI Superalignment Fast Grant</a>.</p>
+                <p>Starting September 2024 I will be a Postdoctoral Associate at <a href="">UMD</a> working with <a href="">Tom Goldstein</a> on LLMs.</p>
+                <p>Before Princeton I worked in <a href="https://rise.cs.berkeley.edu/">the UC Berkeley RISE Lab</a> where I was co-advised
                   by <a href="https://people.eecs.berkeley.edu/~jegonzal/">Joey Gonzalez</a> and <a href="https://people.eecs.berkeley.edu/~raluca/">Raluca Ada Popa</a>, researching federated learning.
-                <p>
-                  While at Berkeley I founded <a href="https://discreetai.com/">DiscreetAI</a>, a <a href="https://www.samsungnext.com/">venture-backed</a> startup building <a href="https://github.com/DiscreetAI/decentralized-ml">privacy-preserving machine learning as-a-service</a>. You can check out <a href="https://www.producthunt.com/products/npm#discreetai">our ProductHunt launch</a> or <a href="https://github.com/discreetai">our GitHub</a> for more information. Among <a href="https://newsroom.haas.berkeley.edu/startups-pitch-win-2018-launch-finals/">other things</a> we won the <a href="https://www.instagram.com/p/BhvgMoDBh6L/?img_index=3">first YCombinator Hackathon</a> and built <a href="https://github.com/DiscreetAI/discreetai-chatbot">federated learning solutions</a> for <a href="https://www.ford.com/">Fortune 500 companies</a>.
-                </p>
+                
                 <p>
                   If you are interested in working with me send me an email at [firstname]_at_[university]_dot_[edu].
                 </p>
@@ -49,29 +48,74 @@
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
                 <p>
-                  I'm interested in privacy-preserving machine learning in the form of differentially private federated learning, and the security concerns that manifest as we move training to the edge, in particular data poisoning, backdoor attacks and adversarial examples. The title of my thesis is "Challenges in Augmenting Large Language Models with Private Data".
+                  I am currently working on a number of topics in LLMs, including pretraining, alignment, safety and privacy.
+                  <!-- I'm interested in privacy-preserving machine learning in the form of differentially private federated learning, and the security concerns that manifest as we move training to the edge, in particular data poisoning, backdoor attacks and adversarial examples.  -->
+                  The title of my PhD thesis was "Challenges in Augmenting Large Language Models with Private Data".
                 </p>
               </td>
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="images/phishingfigure.png" alt="gpt phish" width="160" style="border-style: none">
+              </td>
+              <td width="75%" valign="middle">
+                <a href="https://twitter.com/PandaAshwinee/status/1749190096987853023">
+                  <span class="papertitle">Teach LLMs to Phish: Stealing Private Information from Language Models
+                  </span>
+                </a>
+                <br>
+                <strong>Ashwinee Panda</strong>,
+                Christopher A. Choquette-Choo,
+                Zhengming Zhang,
+                Yaoqing Yang,
+                Prateek Mittal
+                <br>
+                At <em>ICLR 2024</em>
+                <br>
+                <a href="https://arxiv.org/abs/2403.00871">paper</a>
+                <p>We propose a new practical data extraction attack that we call "neural phishing". This attack enables an adversary to target and extract sensitive or personally identifiable information (PII), e.g., credit card numbers, from a model trained on user data.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="images/dpicl.png" alt="dp icl" width="160" style="border-style: none">
+              </td>
+              <td width="75%" valign="middle">
+                <a href="https://twitter.com/PandaAshwinee/status/1747655539168059464">
+                  <span class="papertitle">Privacy-Preserving In-Context Learning for Large Language Models</span>
+                </a>
+                <br>
+                Tong Wu*,
+                <strong>Ashwinee Panda*</strong>,
+                Tianhao Wang*,
+                Prateek Mittal
+                <br>
+                At <em>ICLR 2024</em>
+                <br>
+                <a href="https://arxiv.org/abs/2305.01639">paper</a>
+                <p>We propose the first method for performing differentially private in-context learning. Our method generates sentences from in-context learning while keeping the in-context exemplars differentially private, that can be applied to blackbox APIs (ex RAG).</p>
+              </td>
+            </tr>
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <img src="images/vlm.jpg" alt="VLM" width="160" style="border-style: none">
               </td>
               <td width="75%" valign="middle">
                 <a href="https://twitter.com/PandaAshwinee/status/1673948702397046786">
-                  <span class="papertitle">Introducing Vision into Large Language Models Expands Attack Surfaces and Failure Implications</span>
+                  <span class="papertitle">Visual Adversarial Examples Jailbreak Aligned Large Language Models
+                  </span>
                 </a>
                 <br>
                 Xiangyu Qi*,
                 Kaixuan Huang*,
                 <strong>Ashwinee Panda</strong>,
+                Peter Henderson,
                 Mengdi Wang,
                 Prateek Mittal
                 <br>
-                At <em>40th International Conference on Machine Learning</em> AdvML Workshop
+                At <em>AAAI Conference on Artificial Intelligence, 2024 (Oral)</em>
                 <br>
                 <a href="https://arxiv.org/abs/2306.13213">paper</a> /
                 <a href="https://github.com/Unispac/Visual-Adversarial-Examples-Jailbreak-Large-Language-Models">code</a>
@@ -81,22 +125,23 @@
             
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/teachgpttophish.jpg" alt="gpt phish" width="160" style="border-style: none">
+                <img src="images/dprandp.jpg" alt="dp random priors" width="160" style="border-style: none">
               </td>
               <td width="75%" valign="middle">
-                <a href="https://drive.google.com/file/d/1zSvndyIr6zceLnTjrnZOc5IjiRX6bDO-/view?usp=sharing">
-                  <span class="papertitle">Teach GPT to Phish: Neural Phishing Attacks on Large Language Models</span>
+                <a href="https://twitter.com/PandaAshwinee/status/1668343271691816962">
+                  <span class="papertitle">Differentially Private Image Classification by Learning Priors from Random Processes</span>
                 </a>
                 <br>
-                <strong>Ashwinee Panda</strong>,
-                Zhengming Zhang,
-                Yaoqing Yang,
+                Xinyu Tang*,
+                <strong>Ashwinee Panda*</strong>,
+                Vikash Sehwag,
                 Prateek Mittal
                 <br>
-                At <em>40th International Conference on Machine Learning</em> AdvML Workshop
+                At <em>NeurIPS 2023 (Spotlight)</em>
                 <br>
-                <a href="https://drive.google.com/file/d/1zSvndyIr6zceLnTjrnZOc5IjiRX6bDO-/view?usp=sharing">poster</a>
-                <p>We show that inserting poisons into the training dataset of a large language model can induce the model to exactly memorize its training datapoints so they can be perfectly reconstructed at inference time.</p>
+                <a href="https://arxiv.org/abs/2306.06076">paper</a> /
+                <a href="https://github.com/inspire-group/DP-RandP">code</a>
+                <p>We pretrain networks with synthetic images that have strong performance on downstream private computer vision tasks.</p>
               </td>
             </tr>
             
@@ -126,27 +171,7 @@
               </td>
             </tr>
             
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/dprandp.jpg" alt="dp random priors" width="160" style="border-style: none">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://twitter.com/PandaAshwinee/status/1668343271691816962">
-                  <span class="papertitle">Differentially Private Image Classification by Learning Priors from Random Processes</span>
-                </a>
-                <br>
-                Xinyu Tang*,
-                <strong>Ashwinee Panda*</strong>,
-                Vikash Sehwag,
-                Prateek Mittal
-                <br>
-                <!-- Under Review at <em>NeurIPS 2023</em>
-                <br> -->
-                <a href="https://arxiv.org/abs/2306.06076">paper</a> /
-                <a href="https://github.com/inspire-group/DP-RandP">code</a>
-                <p>We pretrain networks with synthetic images that have strong performance on downstream private computer vision tasks.</p>
-              </td>
-            </tr>
+            
 
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
@@ -171,26 +196,7 @@
                 <p>We propose a new hyperparameter optimization method for differentially private machine learning that massively reduces privacy costs and compute costs.</p>
               </td>
             </tr>
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/dpicl.png" alt="dp icl" width="160" style="border-style: none">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://twitter.com/PandaAshwinee/status/1680910290593132546">
-                  <span class="papertitle">Differentially Private In-Context Learning</span>
-                </a>
-                <br>
-                <strong>Ashwinee Panda*</strong>,
-                Tong Wu*,
-                Tianhao Wang*,
-                Prateek Mittal
-                <br>
-                At <em>NAACL 2023</em> TrustNLP Workshop
-                <br>
-                <a href="https://arxiv.org/abs/2305.01639">paper</a>
-                <p>We propose the first method for performing differentially private in-context learning.</p>
-              </td>
-            </tr>
+            
             
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
@@ -308,6 +314,9 @@
                   In high school I <a href="https://www.facebook.com/MathCompanions">taught math</a>, <a href="https://www.facebook.com/evhs.marching.band/">played sax</a>, <a href="https://www.evsd.club/">argued vociferously</a>,  <a href="https://evergreenvalleyhigh.esuhsd.org/students/performing-arts/drama">sang</a>, <a href="https://www.instagram.com/evhsjunoon/">danced</a>, and <a href="https://www.csssa.ca.gov/">wrote</a> <a href="https://www.facebook.com/groups/186416404874189">slam poetry</a>.
                   Before studying EECS at Cal I <a href="https://www.instagram.com/p/BJHa-uaBmYz/">spent the summer in China</a> working at <a href="https://www.dosepacker.com/">a robotics company</a>. 
                   I've been back a <a href="https://www.instagram.com/p/BrJxJcfnEhF/">couple</a> <a href ="https://www.instagram.com/p/BrZSCucHVOI/?img_index=1">times</a>.
+                </p>
+                <p>
+                  While at Berkeley I founded <a href="https://discreetai.com/">DiscreetAI</a>, a <a href="https://www.samsungnext.com/">venture-backed</a> startup building <a href="https://github.com/DiscreetAI/decentralized-ml">privacy-preserving machine learning as-a-service</a>. You can check out <a href="https://www.producthunt.com/products/npm#discreetai">our ProductHunt launch</a> or <a href="https://github.com/discreetai">our GitHub</a> for more information. Among <a href="https://newsroom.haas.berkeley.edu/startups-pitch-win-2018-launch-finals/">other things</a> we won the <a href="https://www.instagram.com/p/BhvgMoDBh6L/?img_index=3">first YCombinator Hackathon</a> and built <a href="https://github.com/DiscreetAI/discreetai-chatbot">federated learning solutions</a> for <a href="https://www.ford.com/">Fortune 500 companies</a>.
                 </p>
               </td>
             </tr>
