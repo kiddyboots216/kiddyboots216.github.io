@@ -22,14 +22,16 @@
                 <p class="name" style="text-align: center;">
                   Ashwinee Panda
                 </p>
-                <p>I am a 4th (final) year PhD student at <a href="https://princeton.edu/">Princeton University</a> working with <a href="https://www.princeton.edu/~pmittal/">Prateek Mittal</a> on trustworthy artificial intelligence and privacy preserving machine learning.
-                I am funded by <a href="https://gradschool.princeton.edu/financial-support/fellowships/princeton-fellowships/gordon-wu-fellowship">fellowships</a> and <a href="https://www.energy.gov/articles/department-energy-announces-67-million-iot-integration-research">grants</a> , most recently <a href="https://openai.com/blog/superalignment-fast-grants">the OpenAI Superalignment Fast Grant.</a></p>
-                <p>Starting September 2024 I will be a Postdoctoral Associate at <a href="https://www.trails.umd.edu/">UMD</a> working with <a href="https://twitter.com/tomgoldsteincs">Tom Goldstein</a> on large language models.</p>
+                <p>
+                  I am a Postdoctoral Fellow at <a href="https://www.trails.umd.edu/">UMD</a> working with <a href="https://twitter.com/tomgoldsteincs">Tom Goldstein</a>. </p>
+                  <p>
+                  I received my PhD from <a href="https://princeton.edu/">Princeton University</a> working with <a href="https://www.princeton.edu/~pmittal/">Prateek Mittal</a> on trustworthy artificial intelligence and privacy preserving machine learning.
+                My PhD was funded by <a href="https://gradschool.princeton.edu/financial-support/fellowships/princeton-fellowships/gordon-wu-fellowship">fellowships</a> and <a href="https://www.energy.gov/articles/department-energy-announces-67-million-iot-integration-research">grants</a> , most recently <a href="https://openai.com/blog/superalignment-fast-grants">the OpenAI Superalignment Fast Grant.</a></p>
                 <p>Before Princeton I worked in <a href="https://rise.cs.berkeley.edu/">the UC Berkeley RISE Lab</a> where I was co-advised
                   by <a href="https://people.eecs.berkeley.edu/~jegonzal/">Joey Gonzalez</a> and <a href="https://people.eecs.berkeley.edu/~raluca/">Raluca Ada Popa</a>, researching federated learning.
                 
                 <p>
-                  If you are interested in working with me send me an email at [firstname]_at_[university]_dot_[edu].
+                  If you are interested in working with me, send me a DM on Twitter or Wechat.
                 </p>
                 <p style="text-align:center">
                   <a href="data/AshwineePandaCV.pdf">CV</a> &nbsp;/&nbsp;
@@ -48,15 +50,105 @@
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
                 <p>
-                  I am currently working on a number of topics in LLMs, including pretraining, alignment, safety and privacy.
-                  <!-- I'm interested in privacy-preserving machine learning in the form of differentially private federated learning, and the security concerns that manifest as we move training to the edge, in particular data poisoning, backdoor attacks and adversarial examples.  -->
-                  The title of my PhD thesis was "Challenges in Augmenting Large Language Models with Private Data".
+                  I am currently working on a number of topics in LLMs. I am pretraining Mixtures-of-Experts, aligning models for safety, and adapting models without forgetting old information or memorizing new information.
                 </p>
               </td>
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="images/lota.png" alt="lota" width="160" style="border-style: none">
+              </td>
+              <td width="75%" valign="middle">
+                <a href="https://arxiv.org/abs/2406.16797">
+                  <span class="papertitle">Lottery Ticket Adaptation: Mitigating Destructive Interference in LLMs
+                  </span>
+                </a>
+                <br>
+                <strong>Ashwinee Panda</strong>,
+                Berivan Isik,
+                Xiangyu Qi,
+                Sanmi Koyejo,
+                Tsachy Weissman,
+                Prateek Mittal
+                <br>
+                At <em>ICML 2024 ES-FoMO / FM-Wild (Oral)</em>
+                <br>
+                <a href="https://arxiv.org/abs/2401.04343">paper</a> /
+                <a href="https://github.com/kiddyboots216/lottery-ticket-adaptation/">code</a> /
+                <a href="https://x.com/PandaAshwinee/status/1825571610230723027">thread</a>
+                <p>Lottery Ticket Adaptation (LoTA) is a new adaptation method that handles challenging tasks, mitigates catastrophic forgetting, and enables model merging across different tasks.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="images/auditing.png" alt="privacy auditing" width="160" style="border-style: none">
+              </td>
+              <td width="75%" valign="middle">
+                <a href="https://openreview.net/attachment?id=JlAwAMJT5P&name=pdf">
+                  <span class="papertitle">Private Auditing of Large Language Models
+                  </span>
+                </a>
+                <br>
+                <strong>Ashwinee Panda*</strong>,
+                Xinyu Tang*,
+                Milad Nasr,
+                Christopher A. Choquette-Choo,
+                Prateek Mittal
+                <br>
+                At <em>ICML 2024 NextGenAISafety (Oral)</em>
+                <br>
+                <a href="https://openreview.net/attachment?id=JlAwAMJT5P&name=pdf">paper</a> 
+                <p>We present the first method for doing privacy auditing of LLMs.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="images/dpzo.png" alt="dp zo" width="160" style="border-style: none">
+              </td>
+              <td width="75%" valign="middle">
+                <a href="https://arxiv.org/abs/2401.04343">
+                  <span class="papertitle">Private Fine-tuning of Large Language Models with Zeroth-order Optimization
+                  </span>
+                </a>
+                <br>
+                Xinyu Tang*,
+                <strong>Ashwinee Panda*</strong>,
+                Milad Nasr*,
+                Saeed Mahloujifar,
+                Prateek Mittal
+                <br>
+                At <em>TPDP 2024 (Oral)</em>
+                <br>
+                <a href="https://arxiv.org/abs/2401.04343">paper</a>
+                <p>We propose the first method for performing differentially private fine-tuning of large language models without backpropagation. Our method is the first to provide a nontrivial privacy-utility tradeoff under pure differential privacy.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="images/dplinearscaling.png" alt="linear scaling" width="160" style="border-style: none">
+              </td>
+              <td width="75%" valign="middle">
+                <a href="https://arxiv.org/abs/2212.04486">
+                  <span class="papertitle">A New Linear Scaling Rule for Private Adaptive Hyperparameter Optimization
+                  </span>
+                </a>
+                <br>
+                <strong>Ashwinee Panda*</strong>,
+                Xinyu Tang*,
+                Vikash Sehwag,
+                Saeed Mahloujifar,
+                Prateek Mittal
+                <br>
+                At <em>ICML 2024</em>
+                <br>
+                <a href="https://www.youtube.com/watch?v=KzxAP20TMJc&list=PLSIUOFhnxEiDoTNvhZWIm1PNBAFJWUxU8&index=6">talk</a> /
+                <a href="https://arxiv.org/abs/2212.04486">paper</a> /
+                <a href="https://github.com/kiddyboots216/dp-custom/">code</a>
+                <p>We find that using scaling laws for Differentially Private Hyperparameter Optimization significantly outperforms prior work in privacy and compute cost.</p>
+              </td>
+            </tr>
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <img src="images/phishingfigure.png" alt="gpt phish" width="160" style="border-style: none">
@@ -75,7 +167,9 @@
                 <br>
                 At <em>ICLR 2024</em>
                 <br>
-                <a href="https://arxiv.org/abs/2403.00871">paper</a>
+                <a href="https://www.youtube.com/watch?v=Tyw51pIp_gg&list=PLSIUOFhnxEiDoTNvhZWIm1PNBAFJWUxU8&index=2">talk</a> /
+                <a href="https://arxiv.org/abs/2403.00871">paper</a> /
+                <a href="https://x.com/PandaAshwinee/status/1749190096987853023">thread</a>
                 <p>We propose a new practical data extraction attack that we call "neural phishing". This attack enables an adversary to target and extract sensitive or personally identifiable information (PII), e.g., credit card numbers, from a model trained on user data.</p>
               </td>
             </tr>
@@ -95,7 +189,10 @@
                 <br>
                 At <em>ICLR 2024</em>
                 <br>
-                <a href="https://arxiv.org/abs/2305.01639">paper</a>
+                <a href="https://www.youtube.com/watch?v=Tyw51pIp_gg&list=PLSIUOFhnxEiDoTNvhZWIm1PNBAFJWUxU8&index=2">talk</a> /
+                <a href="https://arxiv.org/abs/2305.01639">paper</a> /
+                <a href="https://github.com/tongwu2020/DP-ICL">code</a> /
+                <a href="https://x.com/PandaAshwinee/status/1747655539168059464">thread</a>
                 <p>We propose the first method for performing differentially private in-context learning. Our method generates sentences from in-context learning while keeping the in-context exemplars differentially private, that can be applied to blackbox APIs (ex RAG).</p>
               </td>
             </tr>
@@ -116,7 +213,7 @@
                 Mengdi Wang,
                 Prateek Mittal
                 <br>
-                At <em>AAAI Conference on Artificial Intelligence, 2024 (Oral)</em>
+                At <em>AAAI 2024 (Oral)</em>
                 <br>
                 <a href="https://arxiv.org/abs/2306.13213">paper</a> /
                 <a href="https://github.com/Unispac/Visual-Adversarial-Examples-Jailbreak-Large-Language-Models">code</a>
@@ -147,28 +244,6 @@
             </tr>
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/dpzo.png" alt="dp zo" width="160" style="border-style: none">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://arxiv.org/abs/2401.04343">
-                  <span class="papertitle">Private Fine-tuning of Large Language Models with Zeroth-order Optimization
-                  </span>
-                </a>
-                <br>
-                Xinyu Tang*,
-                <strong>Ashwinee Panda*</strong>,
-                Milad Nasr*,
-                Saeed Mahloujifar,
-                Prateek Mittal
-                <br>
-                <!-- At <em>ICLR 2024</em> -->
-                <br>
-                <a href="https://arxiv.org/abs/2401.04343">paper</a>
-                <p>We propose the first method for performing differentially private fine-tuning of large language models without backpropagation. Our method is the first to provide a nontrivial privacy-utility tradeoff under pure differential privacy.</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
                 <img src="images/dpdiffusion.jpg" alt="dp diffusion" width="160" style="border-style: none">
               </td>
               <td width="75%" valign="middle">
@@ -185,41 +260,14 @@
                 J Zico Kolter,
                 Prateek Mittal
                 <br>
-                At <em>40th International Conference on Machine Learning</em> GenAI Workshop
+                At <em>ICML 2023</em> GenAI Workshop
                 <br>
                 <a href="https://openreview.net/pdf?id=vuVGcl0ed1">paper</a> /
                 <a href="https://drive.google.com/file/d/1s5wI9A-z4OBmucL5IVVFwx9hCZqfYsWX/view?usp=sharing">poster</a>
                 <p>We generate differentially private images from non-privately trained diffusion models by analyzing the inherent privacy of stochastic sampling.</p>
               </td>
             </tr>
-            
-            
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/dpraft.jpg" alt="linear scaling" width="160" style="border-style: none">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://arxiv.org/abs/2212.04486">
-                  <span class="papertitle">A New Linear Scaling Rule for Differentially Private Hyperparameter Optimization</span>
-                </a>
-                <br>
-                <strong>Ashwinee Panda*</strong>,
-                Xinyu Tang*,
-                Vikash Sehwag,
-                Saeed Mahloujifar,
-                Prateek Mittal
-                <br>
-                <!-- Under Review at <em>NeurIPS 2023</em>
-                <br> -->
-                <a href="https://www.youtube.com/watch?v=KzxAP20TMJc&list=PLSIUOFhnxEiDoTNvhZWIm1PNBAFJWUxU8&index=6">talk</a> /
-                <a href="https://arxiv.org/abs/2212.04486">paper</a> /
-                <a href="https://github.com/kiddyboots216/dp-custom/">code</a>
-                <p>We propose a new hyperparameter optimization method for differentially private machine learning that massively reduces privacy costs and compute costs.</p>
-              </td>
-            </tr>
-            
-            
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <img src="images/neurotoxin.jpg" alt="neurotoxin" width="160" style="border-style: none">
@@ -238,7 +286,7 @@
                 Kannan Ramchandran,
                 Michael Mahoney
                 <br>
-                In <em>Proceedings of the 39th International Conference on Machine Learning</em>
+                In <em>ICML 2022 (Spotlight)</em>
                 <br>
                 <a href="https://arxiv.org/abs/2206.10341">paper</a> /
                 <a href="https://drive.google.com/file/d/1sDu_5xWNzU20dleDJWC5JThXtn5BLJLL/view?usp=sharing">poster</a> /
@@ -262,7 +310,7 @@
                 Supriyo Chakraborty,
                 Prateek Mittal
                 <br>
-                In <em>25th International Conference on Artificial Intelligence and Statistics</em>
+                In <em>AISTATS 2022</em>
                 <br>
                 <a href="https://arxiv.org/abs/2112.06274">paper</a> /
                 <a href="https://github.com/kiddyboots216/CommEfficient/tree/attacks">code</a>
@@ -288,7 +336,7 @@
                 Joseph Gonzalez,
                 Raman Arora
                 <br>
-                In <em>Proceedings of the 37th International Conference on Machine Learning</em>
+                In <em>ICML 2020</em>
                 <br>
                 <a href="https://arxiv.org/abs/2007.07682">paper</a> /
                 <a href="https://github.com/kiddyboots216/CommEfficient">code</a>
