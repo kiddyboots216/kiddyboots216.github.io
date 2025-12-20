@@ -35,7 +35,7 @@
                 During my PhD, I received <a href="https://openai.com/blog/superalignment-fast-grants">the OpenAI Superalignment Fast Grant</a> for our work showing that <a href="https://openreview.net/forum?id=6Mxhg9PtDE">current safety alignment is shallow</a>, which received <a href="https://blog.iclr.cc/2025/04/22/announcing-the-outstanding-paper-awards-at-iclr-2025/">the Outstanding Paper Award at ICLR 2025</a>.
                 
                 <p>
-                  <b>I am on the job market.</b>
+                  <b>I am currently on the job market.</b>
                 </p>
                 <p style="text-align:center">
                   <a href="data/AshwineePandaCV_2025.pdf">CV</a> &nbsp;/&nbsp;
@@ -58,10 +58,10 @@
                   <ul style="margin:0 0 0 20px;">
                     <li><strong>Nov 2025:</strong> I received a $310,000 grant from Open Philanthropy to build pretraining datasets.</li>
                     <li><strong>Oct 2025:</strong> I received a $310,000 grant from Open Philanthropy to build reasoning models.</li>
-                    <li><strong>Sep 2025:</strong> 3 papers accepted to NeurIPS 2025: Dense Backprop, Gemstones, and FineGRAIN.</li>
-                    <li><strong>Jul 2025:</strong> 2 papers accepted to COLM 2025: Refusal Tokens and LoRI.</li>
+                    <li><strong>Sep 2025:</strong> 3 papers accepted to NeurIPS 2025: <a href="https://arxiv.org/abs/2504.12463">Dense Backprop</a>, <a href="https://arxiv.org/abs/2502.06857">Gemstones</a>, and <a href="https://finegrainbench.ai/">FineGRAIN</a>.</li>
+                    <li><strong>Jul 2025:</strong> 2 papers accepted to COLM 2025: <a href="https://arxiv.org/abs/2412.06748">Refusal Tokens</a> and <a href="https://arxiv.org/abs/2504.07448">LoRI</a>.</li>
                     <li><strong>Jun 2025:</strong> I received a $218,000 grant from Open Philanthropy to study encoded reasoning.</li>
-                    <li><strong>Apr 2025:</strong> ICLR 2025 Outstanding Paper Award for Safety Alignment.</li>
+                    <li><strong>Apr 2025:</strong> ICLR 2025 Outstanding Paper Award for <a href="https://openreview.net/forum?id=6Mxhg9PtDE">Safety Alignment</a>.</li>
                     <li><strong>Apr 2025:</strong> I received a $150,000 grant from Longview to study the construction of pretraining datasets.</li>
                   </ul>
                 </div>
@@ -74,8 +74,8 @@
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
                 <p>
-                  I am currently working on a number of topics in LLMs. My primary focus is on building systems to improve the development of reasoning models.
-                  A lot of my research is conducted through the lens of sparsity. I was a lead organizer for <a href="https://www.sparsellm.org/">the ICLR 2025 workshop on Sparsity in LLMs</a>.
+                  <p>The goal of my research is to build useful systems. To me, a useful system (1) does what you want it to do, (2) is personalized to you, and (3) can be developed and deployed by you. These desiredata inform the three focuses of my research agenda: safety (the ability to control the behavior of the system), privacy (the ability to personalize the system to you), and efficiency (the ability to develop and deploy the system quickly and cheaply).</p>
+
                   See below for selected publications.
                 </p>
               </td>
@@ -93,7 +93,7 @@
                     document.getElementById(buttonId).classList.add('selectedButton');
                   }
                   function filterPapers(category) {
-                    const papers = document.querySelectorAll('.paper');
+                    var papers = document.querySelectorAll('.paper');
                     papers.forEach(function(paper) {
                       if (paper.getAttribute('data-category') === category) {
                         paper.style.display = 'table-row';
@@ -101,6 +101,10 @@
                         paper.style.display = 'none';
                       }
                     });
+                    // Update category description text
+                    document.getElementById('safety-desc').style.display = (category === 'safety') ? 'block' : 'none';
+                    document.getElementById('privacy-desc').style.display = (category === 'privacy') ? 'block' : 'none';
+                    document.getElementById('efficiency-desc').style.display = (category === 'efficiency') ? 'block' : 'none';
                   }
                   document.addEventListener('DOMContentLoaded', function() {
                     highlightButton('safetyButton');
@@ -110,6 +114,32 @@
               </td>
             </tr>
           </tbody></table>
+
+          <div style="padding:0 20px 10px 20px;">
+            <p id="safety-desc" style="display:block;">My research in safety focuses on
+               understanding how users can control the behavior of systems. 
+               In <i>Shallow Alignment</i>, 
+               we show how the methods by which users leverage control over their systems 
+               -prompting, prefilling, modifying sampling parameters, and finetuning the model- 
+               can easily remove the alignment of the system. 
+               In <i>Refusal Tokens</i>,
+                we show how to calibrate multiple kinds of refusal messages. 
+                In <i>DynaGuard</i>,
+                we show how to to redefine safety as a dynamic process that can be controlled by users.
+                </p>
+            <p id="privacy-desc" style="display:none;">My research in privacy is focused toward 
+              the goal of being able to personalize the system to user data, a primary obstacle
+              to which is potential privacy violations. The two sides to my work are attacks and defenses.
+              In <i>Neural Phishing</i> and <i>Privacy Auditing</i>, we develop new attacks to upper bound 
+              how much information can be extracted from the system. In the rest of my work, we develop 
+              efficient methods for adapting models to user data with differential privacy.
+            </p>
+            <p id="efficiency-desc" style="display:none;">My research in efficiency focuses on 
+              building systems that can be developed and deployed by users. In <i>LoTA</i> and <i>LoRI</i>, 
+              we work on parameter-efficient methods for adapting models to user data. In <i>Gemstones</i> and 
+              <i>Dense Backprop</i>, we investigate how to shape models for efficient pretraining.
+            </p>
+          </div>
 
           <div id="papersList">
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -395,7 +425,7 @@
                 <p>We find that using scaling laws for Differentially Private Hyperparameter Optimization significantly outperforms prior work in privacy and compute cost.</p>
               </td>
             </tr>
-
+            
             <tr class="paper" data-category="privacy">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <img src="images/dprandp.jpg" alt="dp random priors" width="160" style="border-style: none">
@@ -629,26 +659,26 @@
 
             <tr class="paper" data-category="efficiency">
               <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/softpbt.jpg" alt="softpbt" width="160" style="border-style: none">
+                <img src="images/softpbt.jpg" alt="softpbt" width="160" style="border-style: none">             
               </td>
-              <td width="75%" valign="middle">
-                <a href="https://github.com/kiddyboots216/SoftPBT/blob/master/ICLR_2020___SoftPBT%20(2).pdf">
-                  <span class="papertitle">SoftPBT: Leveraging Experience Replay for Efficient Hyperparameter Schedule Search</span>
-                </a>
-                <br>
-                <strong>Ashwinee Panda</strong>,
-                Eric Liang,
-                Richard Liaw,
-                Joey Gonzalez
-                <br>
-                <a href="https://github.com/kiddyboots216/SoftPBT/blob/master/ICLR_2020___SoftPBT%20(2).pdf">paper</a> /
-                <a href="https://github.com/kiddyboots216/SoftPBT">code</a>
+                <td width="75%" valign="middle">
+                  <a href="https://github.com/kiddyboots216/SoftPBT/blob/master/ICLR_2020___SoftPBT%20(2).pdf">
+                    <span class="papertitle">SoftPBT: Leveraging Experience Replay for Efficient Hyperparameter Schedule Search</span>
+                  </a>
+                  <br>
+                  <strong>Ashwinee Panda</strong>,
+                  Eric Liang,
+                  Richard Liaw,
+                  Joey Gonzalez
+                  <br>
+                  <a href="https://github.com/kiddyboots216/SoftPBT/blob/master/ICLR_2020___SoftPBT%20(2).pdf">paper</a> /
+                  <a href="https://github.com/kiddyboots216/SoftPBT">code</a>
               </td>
             </tr>
-
+              
           </tbody></table>
           </div>
-
+              
                 
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
             <tr>
@@ -667,15 +697,16 @@
                   <a href="https://en.wikipedia.org/wiki/Berkeley,_California">lived</a> 
                   <a href="https://en.wikipedia.org/wiki/Princeton,_New_Jersey">all</a> 
                   <a href="https://en.wikipedia.org/wiki/New_York_City">over</a> 
-                  <a href="https://en.wikipedia.org/wiki/Washington,_D.C.">America;</a>
-                  feel free to ask me for food recs in <a href="https://www.instagram.com/stories/highlights/18124010734224361/">NYC</a>, <a href="https://www.instagram.com/stories/highlights/17920690429823023/">LA</a>, the SF Bay Area, or the DMV. 
+                  <a href="https://en.wikipedia.org/wiki/Washington,_D.C.">America</a>
+                  and traveled across the world.
+                  Feel free to ask me for food recs in <a href="https://www.instagram.com/stories/highlights/18124010734224361/">NYC</a>, <a href="https://www.instagram.com/stories/highlights/17920690429823023/">LA</a>, the SF Bay Area, or the DMV. 
                 </p>
                 <p>
                   While at Berkeley I founded <a href="https://discreetai.com/">DiscreetAI</a> (now inactive), a <a href="https://www.samsungnext.com/">venture-backed</a> startup building <a href="https://github.com/DiscreetAI/decentralized-ml">privacy-preserving machine learning as-a-service</a>. You can check out <a href="https://www.producthunt.com/products/npm#discreetai">our ProductHunt launch</a> or <a href="https://github.com/discreetai">our GitHub</a> for more information. Among <a href="https://newsroom.haas.berkeley.edu/startups-pitch-win-2018-launch-finals/">other things</a> we won the <a href="https://www.instagram.com/p/BhvgMoDBh6L/?img_index=3">first YCombinator Hackathon</a> and built <a href="https://github.com/DiscreetAI/discreetai-chatbot">federated learning solutions</a> for <a href="https://www.ford.com/">Fortune 500 companies</a>.
                 </p>
               
                 <p>
-                I read a lot and post my thoughts on Twitter and Goodreads. 
+                I read a lot and post my thoughts (mostly now on Twitter, previously on Goodreads). 
                 <li><a href="https://x.com/PandaAshwinee/status/1874720150953562348">2025; Twitter thread of 60 books read.</a></li>
                 <li><a href="https://x.com/PandaAshwinee/status/1759441743026491710">2024; Twitter thread of 23 books read.</a></li> 
                 <li><a href="https://x.com/PandaAshwinee/status/1739934767720657222">2023; ELO rating tierlist (72 books).</a></li> 
