@@ -1,0 +1,70 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out homepage
+        uses: actions/checkout@v6
+
+      - name: Read pinned mismatch revision
+        id: mismatch
+        run: echo "sha=$(git rev-parse HEAD:_private/mismatch)" >> "$GITHUB_OUTPUT"
+
+      - name: Check out private mismatch article
+        uses: actions/checkout@v6
+        with:
+          repository: kiddyboots216/k3-talk-site
+          ref: ${{ steps.mismatch.outputs.sha }}
+          ssh-key: ${{ secrets.MISMATCH_DEPLOY_KEY }}
+          path: _private/mismatch
+
+      - name: Validate mismatch article
+        working-directory: _private/mismatch
+        run: |
+          python3 build.py --check
+          node --check app.js
+
+      - name: Assemble public site
+        run: |
+          mkdir -p _site/mismatch
+          cp index.html stylesheet.css _site/
+          cp -R data images _site/
+          cp _private/mismatch/index.html _site/mismatch/
+          cp _private/mismatch/styles.css _site/mismatch/
+          cp _private/mismatch/app.js _site/mismatch/
+          cp _private/mismatch/facts.js _site/mismatch/
+          cp -R _private/mismatch/vendor _site/mismatch/
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload public site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
