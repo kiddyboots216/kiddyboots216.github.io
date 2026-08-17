@@ -15,10 +15,34 @@
         background-color: #4CAF50;
         color: white;
       }
+      .navtabs {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 14px 2.5% 0;
+        box-sizing: border-box;
+        text-align: right;
+      }
+      .navtab {
+        display: inline-block;
+        padding: 4px 12px;
+        margin-left: 4px;
+        font-family: 'Lato', Verdana, Helvetica, sans-serif;
+        font-weight: 700;
+        border-bottom: 2px solid transparent;
+      }
+      .navtab-active {
+        color: #343434;
+        border-bottom-color: #1772d0;
+      }
     </style>
   </head>
 
   <body>
+    <nav class="navtabs">
+      <a class="navtab navtab-active" href="index.html">Home</a>
+      <a class="navtab" href="mismatch/">Blog</a>
+    </nav>
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
@@ -46,6 +70,19 @@
               </td>
               <td style="padding:2.5%;width:40%;max-width:40%">
                 <a href="images/profpic_square.jpg"><img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="images/profpic_square.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Blog</h2>
+                <div style="border:1px solid #ddd;border-radius:8px;padding:16px 20px;background-color:#fafafa;">
+                  <a href="mismatch/">
+                    <span class="papertitle" style="font-size:16px;">0 train-infer mismatch for Open-weight MoE RL in Open-source code</span>
+                  </a>
+                </div>
               </td>
             </tr>
           </tbody></table>
