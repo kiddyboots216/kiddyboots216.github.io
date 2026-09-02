@@ -1,3 +1,6 @@
 [submodule "_private/mismatch"]
 	path = _private/mismatch
 	url = git@github.com:kiddyboots216/k3-talk-site.git
+[submodule "_private/megakernel"]
+	path = _private/megakernel
+	url = git@github.com:kiddyboots216/one-kernel-thirty-six-layers.git

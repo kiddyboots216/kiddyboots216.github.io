@@ -39,6 +39,35 @@ jobs:
           python3 build.py --check
           node --check app.js
 
+      - name: Read pinned megakernel revision
+        id: megakernel
+        run: echo "sha=$(git rev-parse HEAD:_private/megakernel)" >> "$GITHUB_OUTPUT"
+
+      - name: Check out private megakernel article
+        uses: actions/checkout@v6
+        with:
+          repository: kiddyboots216/one-kernel-thirty-six-layers
+          ref: ${{ steps.megakernel.outputs.sha }}
+          ssh-key: ${{ secrets.MEGAKERNEL_DEPLOY_KEY }}
+          path: _private/megakernel
+
+      - name: Set up Node for the megakernel build
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: _private/megakernel/package-lock.json
+
+      - name: Build megakernel static export
+        working-directory: _private/megakernel
+        env:
+          STATIC_EXPORT_BASE_PATH: /megakernel
+          NEXT_PUBLIC_ASSET_PREFIX: /megakernel
+          NEXT_PUBLIC_SITE_URL: https://kiddyboots216.github.io/megakernel
+        run: |
+          npm ci
+          npm run build
+
       - name: Assemble public site
         run: |
           mkdir -p _site/mismatch
@@ -49,6 +78,10 @@ jobs:
           cp _private/mismatch/app.js _site/mismatch/
           cp _private/mismatch/facts.js _site/mismatch/
           cp -R _private/mismatch/vendor _site/mismatch/
+          mkdir -p _site/megakernel
+          cp -R _private/megakernel/public/. _site/megakernel/
+          cp _private/megakernel/dist/client/index.html _site/megakernel/
+          cp -R _private/megakernel/dist/client/megakernel/_next _site/megakernel/_next
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
